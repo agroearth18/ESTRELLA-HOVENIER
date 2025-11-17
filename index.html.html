@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estrella Hovenier – Gardening Services NL</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7; color:#1c1c1c; }
+    header { background:#0b3d0b; padding:30px; text-align:center; color:white; }
+    header img { width:120px; }
+    nav { background:#145214; padding:10px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; cursor:pointer; }
+    .lang-switch { margin-top:8px; font-size:14px; }
+    .lang-switch button { margin:0 5px; padding:4px 8px; border:none; border-radius:4px; cursor:pointer; font-size:13px; }
+    .lang-switch button.active { background:white; color:#145214; font-weight:bold; }
+    .hero { padding:80px 20px; text-align:center; background:white; }
+    .hero h1 { font-size:42px; margin-bottom:10px; color:#0b3d0b; }
+    .hero p { font-size:20px; color:#333; }
+    section { padding:50px 20px; max-width:1000px; margin:auto; }
+    h2 { color:#0b3d0b; margin-bottom:15px; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
+    .card { background:white; padding:25px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    .contact-box { background:#0b3d0b; color:white; padding:30px; border-radius:10px; }
+    footer { background:#0b3d0b; color:white; text-align:center; padding:20px; margin-top:40px; font-size:14px; }
+    .logo { width:120px; margin-bottom:20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.png" alt="Estrella Hovenier Logo" />
+    <h1>Estrella Hovenier</h1>
+    <p data-i18n-key="tagline">Professional Gardening & Landscaping Services in Noord-Brabant</p>
+    <div class="lang-switch">
+      <span data-i18n-key="language-label">Language:</span>
+      <button id="btn-en" class="active" onclick="setLanguage('en')">EN</button>
+      <button id="btn-nl" onclick="setLanguage('nl')">NL</button>
+      <button id="btn-es" onclick="setLanguage('es')">ES</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#services" data-i18n-key="nav-services">Services</a>
+    <a href="#about" data-i18n-key="nav-about">About us</a>
+    <a href="#contact" data-i18n-key="nav-contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1 data-i18n-key="hero-title">Your Garden, Our Passion</h1>
+    <p data-i18n-key="hero-subtitle">We speak English, Spanish and een beetje Nederlands.</p>
+  </div>
+
+  <section id="services">
+    <h2 data-i18n-key="services-title">Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3 data-i18n-key="service1-title">Garden Maintenance</h3>
+        <p data-i18n-key="service1-text">Regular care, pruning, hedge trimming, lawn mowing and seasonal cleaning.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n-key="service2-title">Irrigation Systems</h3>
+        <p data-i18n-key="service2-text">Installation, repair and optimization of water-efficient irrigation systems.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n-key="service3-title">Garden Design</h3>
+        <p data-i18n-key="service3-text">Custom landscape design for modern, classic and natural-style gardens.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n-key="service4-title">Tree Planting</h3>
+        <p data-i18n-key="service4-text">Professional planting, soil preparation and advice for long-term growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 data-i18n-key="about-title">About Us</h2>
+    <p data-i18n-key="about-text">Based in Sint-Michielsgestel, Estrella Hovenier offers professional gardening services across Noord-Brabant. With experience in landscaping, irrigation, maintenance, and tree planting, we help homeowners and companies keep their outdoor spaces beautiful and healthy.</p>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n-key="contact-title">Contact</h2>
+    <div class="contact-box">
+      <p><strong data-i18n-key="contact-phone-label">Phone:</strong> +31 6 19425844</p>
+      <p><strong data-i18n-key="contact-email-label">Email:</strong> agroearth18@gmail.com</p>
+      <p><strong data-i18n-key="contact-location-label">Location:</strong> Sint-Michielsgestel, NL</p>
+      <p data-i18n-key="contact-whatsapp">WhatsApp: scan the QR code on our business card.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span data-i18n-key="footer-text">© 2025 Estrella Hovenier – All rights reserved</span>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        tagline: "Professional Gardening & Landscaping Services in Noord-Brabant",
+        "language-label": "Language:",
+        "nav-services": "Services",
+        "nav-about": "About us",
+        "nav-contact": "Contact",
+        "hero-title": "Your Garden, Our Passion",
+        "hero-subtitle": "We speak English, Spanish and een beetje Nederlands.",
+        "services-title": "Our Services",
+        "service1-title": "Garden Maintenance",
+        "service1-text": "Regular care, pruning, hedge trimming, lawn mowing and seasonal cleaning.",
+        "service2-title": "Irrigation Systems",
+        "service2-text": "Installation, repair and optimization of water-efficient irrigation systems.",
+        "service3-title": "Garden Design",
+        "service3-text": "Custom landscape design for modern, classic and natural-style gardens.",
+        "service4-title": "Tree Planting",
+        "service4-text": "Professional planting, soil preparation and advice for long-term growth.",
+        "about-title": "About Us",
+        "about-text": "Based in Sint-Michielsgestel, Estrella Hovenier offers professional gardening services across Noord-Brabant. With experience in landscaping, irrigation, maintenance, and tree planting, we help homeowners and companies keep their outdoor spaces beautiful and healthy.",
+        "contact-title": "Contact",
+        "contact-phone-label": "Phone:",
+        "contact-email-label": "Email:",
+        "contact-location-label": "Location:",
+        "contact-whatsapp": "WhatsApp: scan the QR code on our business card.",
+        "footer-text": "© 2025 Estrella Hovenier – All rights reserved"
+      },
+      nl: {
+        tagline: "Professionele tuin- en landschapsdienstverlening in Noord-Brabant",
+        "language-label": "Taal:",
+        "nav-services": "Diensten",
+        "nav-about": "Over ons",
+        "nav-contact": "Contact",
+        "hero-title": "Uw tuin, onze passie",
+        "hero-subtitle": "We spreken Engels, Spaans en een beetje Nederlands.",
+        "services-title": "Onze diensten",
+        "service1-title": "Tuinonderhoud",
+        "service1-text": "Regelmatig onderhoud, snoeien, hagen knippen, gras maaien en seizoensschoonmaak.",
+        "service2-title": "Beregeningssystemen",
+        "service2-text": "Installatie, reparatie en optimalisatie van waterzuinige beregeningssystemen.",
+        "service3-title": "Tuinontwerp",
+        "service3-text": "Maatwerk tuinontwerp voor moderne, klassieke en natuurlijke tuinen.",
+        "service4-title": "Bomen planten",
+        "service4-text": "Professionele aanplant, bodemvoorbereiding en advies voor gezonde groei op lange termijn.",
+        "about-title": "Over ons",
+        "about-text": "Estrella Hovenier, gevestigd in Sint-Michielsgestel, biedt professionele tuindiensten in heel Noord-Brabant. Met ervaring in landscaping, beregening, onderhoud en het planten van bomen helpen wij particulieren en bedrijven hun buitenruimtes mooi en gezond te houden.",
+        "contact-title": "Contact",
+        "contact-phone-label": "Telefoon:",
+        "contact-email-label": "E-mail:",
+        "contact-location-label": "Locatie:",
+        "contact-whatsapp": "WhatsApp: scan de QR-code op ons visitekaartje.",
+        "footer-text": "© 2025 Estrella Hovenier – Alle rechten voorbehouden"
+      },
+      es: {
+        tagline: "Servicios profesionales de jardinería y paisajismo en Brabante del Norte",
+        "language-label": "Idioma:",
+        "nav-services": "Servicios",
+        "nav-about": "Sobre nosotros",
+        "nav-contact": "Contacto",
+        "hero-title": "Tu jardín, nuestra pasión",
+        "hero-subtitle": "Hablamos inglés, español y un poquito de neerlandés.",
+        "services-title": "Nuestros servicios",
+        "service1-title": "Mantenimiento de jardines",
+        "service1-text": "Cuidado regular, poda, recorte de setos, corte de césped y limpieza estacional.",
+        "service2-title": "Sistemas de riego",
+        "service2-text": "Instalación, reparación y optimización de sistemas de riego eficientes en agua.",
+        "service3-title": "Diseño de jardines",
+        "service3-text": "Diseño de paisajes a medida para jardines modernos, clásicos y naturales.",
+        "service4-title": "Plantación de árboles",
+        "service4-text": "Plantación profesional, preparación del suelo y asesoría para un crecimiento sano a largo plazo.",
+        "about-title": "Sobre nosotros",
+        "about-text": "Con sede en Sint-Michielsgestel, Estrella Hovenier ofrece servicios profesionales de jardinería en toda Brabante del Norte. Con experiencia en paisajismo, riego, mantenimiento y plantación de árboles, ayudamos a propietarios y empresas a mantener sus espacios exteriores bonitos y saludables.",
+        "contact-title": "Contacto",
+        "contact-phone-label": "Teléfono:",
+        "contact-email-label": "Correo electrónico:",
+        "contact-location-label": "Ubicación:",
+        "contact-whatsapp": "WhatsApp: escanea el código QR de nuestra tarjeta de presentación.",
+        "footer-text": "© 2025 Estrella Hovenier – Todos los derechos reservados"
+      }
+    };
+
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-i18n-key]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n-key');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-nl').classList.toggle('active', lang === 'nl');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
